@@ -490,7 +490,7 @@ input[type="submit"]:hover {
         padding: 1rem;
     }
     .botones-donacion button {
-        width: 100%;
+        width: 80%;
         padding: 1rem; 
     }
 }
@@ -521,10 +521,6 @@ input[type="submit"]:hover {
     .metodos-de-donacion, .info-donacion{
         font-size: 0.8rem;
         width: 70%;
-    }
-    .botones-donacion button {
-        width: 70%;
-        padding: 0.75rem 1rem; 
     }
     #seleccion-de-donacion{
         flex-direction: column;
