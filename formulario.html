@@ -1,17 +1,19 @@
-<!-- formulario.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <title>Formulario - Cuatro Patitas</title>
 </head>
-<body>
+<header>
     <h1>Formulario - Cuatro Patitas</h1>
+</header>
+<body>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="adopciones.html">Adopciones</a></li>
-            <li><a href="formulario.html">Formulario</a></li> <!-- Enlace a la página del formulario -->
             <li><a href="donaciones.html">Donaciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -19,17 +21,154 @@
 
     <div class="contenido">
         <main>
+            <h2 class="titulo-form">Complete el formulario para continuar con la adopcion.</h2>
+            <h2 class="titulo-form">Solo pueden completar el formulario mayores de edad.</h2>
+            <h2 class="titulo-form">Uno de nuestros integrantes se comunicara con usted una vez evaluado.</h2>
             <form>
                 <fieldset>
-                    <legend>Encuesta</legend>
-                    <label for="Pregunta1">¿Por qué quieres adoptar este perrito?</label>
-                    <textarea name="Pregunta1" id="Pregunta1" rows="4" cols="50" placeholder="Escribe aquí tu respuesta"></textarea>
+                    <legend>Cuestionario Pre-Adopción</legend>
 
-                    <label for="Pregunta2">¿Qué función cumpliría esta mascota en tu hogar?</label>
-                    <textarea name="Pregunta2" id="Pregunta2" rows="4" cols="50" placeholder="Escribe aquí tu respuesta"></textarea>
+                    <!-- Datos del adoptante -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+                    </div>
 
-                    <label for="Pregunta3">¿La abandonarías en caso de enfermedad?</label>
-                    <textarea name="Pregunta3" id="Pregunta3" rows="4" cols="50" placeholder="Escribe aquí tu respuesta"></textarea>
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" max="99" min="0" placeholder="Escribe tu edad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="localidad">Localidad:</label>
+                        <input type="text" id="localidad" name="localidad" placeholder="Escribe tu localidad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profesion">Profesión/Ocupación:</label>
+                        <input type="text" id="profesion" name="profesion" placeholder="Escribe tu profesión u ocupación">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="redes">Redes Sociales:</label>
+                        <input type="text" id="redes" name="redes" placeholder="Escribe tus redes sociales">
+                    </div>
+
+                    <!-- Preguntas sobre la adopción -->
+                    <div class="form-group">
+                        <label for="motivo">¿Por qué le interesa este animal en particular?</label>
+                        <textarea id="motivo" name="motivo" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="funcion">¿Qué función desempeñaría en su hogar (compañía, guardia, etc)?</label>
+                        <textarea id="funcion" name="funcion" rows="4" placeholder="Especifica lo más posible" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="propiedad">¿La casa en donde vive es de su propiedad?</label>
+                        <input type="text" id="propiedad" name="propiedad" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquilino"> Si es inquilino, ¿el propietario le permite tener una mascota?</label>
+                        <input type="text" id="inquilino" name="inquilino" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reglamento">Si vive en propiedad horizontal, ¿el reglamento del consorcio permite la tenencia de mascotas?</label>
+                        <input type="text" id="reglamento" name="reglamento" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="espacios">¿La casa tiene patio, jardín, balcón? En caso de tener patio o jardín, ¿está tapiado o alambrado?</label>
+                        <textarea id="espacios" name="espacios" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cuidado">¿Al cuidado de quién quedaría el animal cuando vaya de vacaciones?</label>
+                        <input type="text" id="cuidado" name="cuidado" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horas-solo">¿Cuántas horas por día estaría solo el animal?</label>
+                        <input type="number" id="horas-solo" name="horas-solo" placeholder="Escribe la cantidad de horas" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="frecuencia">¿Cuántas veces lo sacarían al día?</label>
+                        <input type="number" id="frecuencia" name="frecuencia" placeholder="Escribe la cantidad de veces" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dia">¿Dónde estaría el animal durante el día?</label>
+                        <textarea id="dia" name="dia" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noche">¿Dónde dormiría?</label>
+                        <textarea id="noche" name="noche" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="familia">¿Cuántas personas viven en la casa y qué edades tienen?</label>
+                        <textarea id="familia" name="familia" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="acuerdo">¿Están de acuerdo TODOS los integrantes del grupo familiar con adoptar una mascota?</label>
+                        <input type="text" id="acuerdo" name="acuerdo" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mascotas-anteriores">¿Ya ha tenido mascotas? ¿De qué murieron?</label>
+                        <textarea id="mascotas-anteriores" name="mascotas-anteriores" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mascotas-actuales">¿En la actualidad tiene mascotas? En caso de respuesta afirmativa:</label>
+                        <textarea id="mascotas-actuales" name="mascotas-actuales" rows="6" placeholder="Especificar especie, edad, si están esterilizados, veterinario y recursos" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="esterilizacion">Si el animalito es cachorro, ¿Todos los integrantes de la familia están de acuerdo con esterilizarlo a la edad correspondiente?</label>
+                        <textarea id="esterilizacion" name="esterilizacion" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recursos">¿Tiene recursos económicos para mantenerlo, aplicarle las vacunas anuales correspondientes y afrontar cualquier eventual inconveniente relativo a la salud del animal?</label>
+                        <input type="text" id="recursos" name="recursos" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="problemas">¿Qué motivo haría que no pudiera hacerse más cargo del animal? ¿Qué haría?</label>
+                        <textarea id="problemas" name="problemas" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visita">¿Está dispuesto a recibir una visita nuestra, con el objetivo de conocer la familia y el futuro posible hogar del animal?</label>
+                        <input type="text" id="visita" name="visita" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="responsabilidad">¿Ud. es consciente de la responsabilidad que significa adoptar una mascota para toda la vida?</label>
+                        <input type="text" id="responsabilidad" name="responsabilidad" placeholder="Escribe tu respuesta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto" class="subir-archivo">Importante: Anexar al cuestionario foto del patio cerrado o balcón con red.</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" required>
+                    </div>
 
                     <input type="submit" value="Enviar">
                 </fieldset>

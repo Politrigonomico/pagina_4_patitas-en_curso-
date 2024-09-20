@@ -7,17 +7,22 @@
     margin: 0;
 }
 
-/* Estilos para el encabezado */
-h1 {
-    text-align: center;
-    background-color: black;
-    color: darkgray;
-    padding: 20px;
+body{
+    background: linear-gradient(to bottom, #a2c2e0 0%, #72a2c2 50%, #004e92 100%);
+}
+
+
+.boton_adopciones{
+    color: black;
+}
+
+.boton_adopciones:hover{
+    color: #891976;
 }
 
 /* Estilos para la navegación */
 nav ul {
-    background-color: grey;
+    background-color: rgb(32, 160, 183);
     width: 100%;
     list-style-type: none;
     padding: 0;
@@ -39,20 +44,68 @@ nav a {
 }
 
 nav li:hover {
-    background-color: black;
+    background-color: rgb(14, 83, 94); 
+    transition: 0.4s ease;
 }
 
-/* Estilos para las imágenes */
-img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+footer{
+    text-align: center;
+    background-color: rgb(18, 42, 105);
+    color: rgb(250, 250, 250);
+    padding: 20px;
+    font-style: arial;
+    margin-top: auto;
+}
+.pie-contacto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+}
+/* 
+
+
+Aca termina la bienvenida y las alteraciones de la barra de navegacion.
+*/
+
+
+
+
+/* Estilos para el contenido principal o Index */
+
+/* Estilos para el encabezado */
+h1 {    /* Este h1 modifica todos los h1 */
+    text-align: center;
+    background-color: rgb(18, 42, 105);
+    color: rgb(250, 250, 250);
+    padding: 20px;
+    font-style: arial;
 }
 
-/* Estilos para el contenido principal */
+.mapa{
+    justify-content: center;
+    display: flex;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.bienvenida img{
+    width: 500px;
+    padding-right: 10%;
+    padding-top: 5%;
+    
+}
+
+.bienvenida figure{
+    text-align: center;
+    color: rgb(33, 33, 209);
+    font-style: arial;
+}
+.Titulo-bienvenida{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
 .contenido {
     display: flex;
     margin: 80px;
@@ -78,19 +131,16 @@ img {
     font-size: 18px;
 }
 
-.Lola {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 40%;
+.Texto_adopciones{
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 10%;
+    margin-top: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.secciones div footer {
-    text-decoration: underline;
-    color: brown;
-    margin-top: 10px;
-}
+
+
 
 /* Estilos para el menú secundario */
 .menu-secundario {
@@ -105,47 +155,381 @@ img {
     margin-bottom: 20px;
 }
 
+.menu-secundario a:hover{
+    color: violet;
+}
+
+
+
+
+/* ACA ES PARA LOS ANIMALES EN ADOPCION */
+
+
+.animales_en_adopcion {
+    width: auto;
+            height: auto;
+            background: linear-gradient(to bottom, #a2c2e0 0%, #72a2c2 50%, #004e92 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las figuras en la página */
+    gap: 20px; /* Añade espacio entre las figuras */
+    padding: 3%;
+}
+
+.animales_en_adopcion img:hover{
+    box-shadow: 5px 3px 20px 10px blue;
+
+}
+
+figure {
+    flex: 1 1 calc(25% - 40px); /* Ajusta la figura para que ocupe un cuarto del ancho menos el espacio del gap */
+    margin: 0; /* Remueve el margen para evitar saltos */
+}
+
+figure img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la figura */
+    height: auto;
+    border-radius: 8px; /* Añade bordes redondeados a las imágenes */
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.Texto_adopciones {
+    margin: 0;
+}
+
+.botonadoptar {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff; /* Color de fondo inicial */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+}
+
+.botonadoptar:hover {
+    background-color: chocolate; /* Color de fondo al pasar el cursor */
+    color: blue; /* Color del texto al pasar el cursor */
+}
+
+
+
+
+/*ACA TERMINA LA PARTE DE ADOPCIONES */
+
+
+
+
 /* Estilos específicos para el formulario */
+
+/* Estilos para los encabezados del formulario */
+
+.titulo-form {
+    text-align: center;
+    margin: 2rem 0; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #333; 
+}
+
+.titulo-form:first-of-type {
+    margin-top: 0.2rem; 
+}
+
+.titulo-form:last-of-type {
+    margin-bottom: 3rem; 
+}
+
+
+/* Opcional: Añadir un borde inferior para mayor énfasis */
+.titulo-form::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #007BFF; /* Color que coincida con el diseño general */
+    margin: 0.5rem auto; /* Centrando el borde */
+}
+
+legend {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #002774; 
+    margin-bottom: 2rem; 
+    border: 2px solid #007BFF; 
+    text-align: center; 
+    width: 40%;
+}
+
+
 form {
+    background: linear-gradient(to bottom, #6faee9 0%, #72a2c2 50%, #004e92 100%);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 800px;
-    padding: 1rem;
+    max-width: 800px; 
+    padding: 4rem; 
 }
 
-textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 97%;
+.form-group {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem; 
 }
 
 label {
     margin-bottom: 0.5rem;
     font-weight: bold;
+    font-size: 1.1rem;
+    color: #1a1c2c;
 }
 
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+input[type="number"]:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+.subir-archivo {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #28a745; 
+    border-radius: 4px;
+    background-color: #28a745; 
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.subir-archivo:hover {
+    background-color: #347d44; 
+    border-color: #347d44; 
+}
+
+
 input[type="submit"] {
+    display: block;
+    margin: 1rem auto;
+    width: 80% ;
     padding: 0.75rem 1.5rem;
     border: none;
     background-color: #007BFF;
     color: white;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #010406;
+    background-color: #00438b;
 }
+
+/*aca termina lo del formulario */ 
+
+
+
 
 /* Estilos para donaciones */
-.donaciones h1{
-    font-size: 1.5rem;
-    color: #0056b3;
-    text-align: center;
-
+.info-donacion {
+    background-color: #6faee9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info-donacion:hover{
+    box-shadow: 0px 0px 6px 5px ;
+    transition: 700ms ease;
 }
 
+.metodos-de-donacion{
+    background-color: #6faee9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.metodos-de-donacion:hover{
+    box-shadow: 0px 0px 6px 5px ;
+    transition: 700ms ease;
+}
+
+#link-mp{
+    color: rgb(9, 54, 252);
+    padding: 0.1rem 0.1rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+#link-mp:hover{
+    text-decoration: underline;
+}
+
+.tipo-donacion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botones-donacion button {
+    background-color: #004e92;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+.botones-donacion button:hover {
+    background-color: #3795b4;
+}
+.botones-donacion a {
+    text-decoration: none;
+    color: white;
+    display: block; /* El enlace ocupa todo el boton */
+}
+.botones-donacion a:focus {
+    text-decoration: underline;
+}
+
+
+
+/*EMPIEZA SECCION CONTACTO */
+
+
+
+/*ACA TERMINA CONTACTO */
+
+
+
+
+/*Pagina interactiva, mover cada cosa que se cree aca para que se reescale correctamente  */
+@media (max-width: 800px) {
+    .contenido {
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .articulos {
+        width: 100%;
+        border-right: none;
+    }
+
+    .bienvenida img {
+        width: 100%;
+        padding-right: 0;
+        padding-top: 5%;
+    }
+
+    .menu-secundario {
+        margin-top: 20px;
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    nav a {
+        padding: 15px; 
+        width: 100%; 
+    }
+    .mapa{
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%;
+    }
+    #container {
+        width: 15px; 
+        height: 15px; 
+    }
+
+    .toggle {
+        width: 5px; 
+        height: 5px; 
+    }
+    .metodos-de-donacion, .info-donacion{
+        max-width: 100%;
+        padding: 1rem;
+    }
+    .botones-donacion button {
+        width: 100%;
+        padding: 1rem; 
+    }
+}
+
+
+@media (max-width: 330px) {
+
+    .animales_en_adopcion {
+        flex-direction: column;
+    }
+
+    .bienvenida img {
+        width: 80px;
+    }
+
+    .menu-secundario a {
+        font-size: 14px;
+    }
+    #container {
+        width: 5px; 
+        height: 5px; 
+    }
+
+    .toggle {
+        width: 5px;
+        height: 5px;
+    }
+    .metodos-de-donacion, .info-donacion{
+        font-size: 0.8rem;
+        width: 70%;
+    }
+    .botones-donacion button {
+        width: 70%;
+        padding: 0.75rem 1rem; 
+    }
+    #seleccion-de-donacion{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 0.75rem 1rem; 
+    }
+}
