@@ -427,7 +427,12 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-
+.pie-donaciones{
+    width: 100%;
+    padding: 10px 0;
+    bottom: 0;
+    flex: 1;
+}
 
 /*EMPIEZA SECCION CONTACTO */
 
