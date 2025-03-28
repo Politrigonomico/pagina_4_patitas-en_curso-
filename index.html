@@ -6,54 +6,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Cuatro Patitas - Adopciones</title>
 </head>
-<body class="bg-blue-100 font-sans">
+<body class="bg-paws font-sans">
 
     <!-- Navbar -->
     <nav class="bg-blue-900 text-white p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Cuatro Patitas</h1>
-            <ul class="flex space-x-6">
-                <li><a href="adopciones.html" class="hover:underline">Adopciones</a></li>
-                <li><a href="formulario.html" class="hover:underline">Formulario</a></li>
-                <li><a href="donaciones.html" class="hover:underline">Donaciones</a></li>
-                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+            <h1 class="text-3xl font-extrabold">🐾 Cuatro Patitas</h1>
+            <button id="menu-toggle" class="block md:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 absolute md:static bg-blue-900 w-full md:w-auto left-0 top-14 md:top-0 p-4 md:p-0 shadow-lg md:shadow-none text-lg">
+                <li><a href="adopciones.html" class="block md:inline hover:underline p-3 font-semibold">🐶 Adopciones</a></li>
+                <li><a href="formulario.html" class="block md:inline hover:underline p-3 font-semibold">📄 Formulario</a></li>
+                <li><a href="donaciones.html" class="block md:inline hover:underline p-3 font-semibold">💰 Donaciones</a></li>
+                <li><a href="contacto.html" class="block md:inline hover:underline p-3 font-semibold">📞 Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-400 to-blue-600 text-white text-center py-16">
-        <h2 class="text-4xl font-bold">¡Dales una segunda oportunidad!</h2>
-        <p class="mt-4 text-lg">Encuentra a tu mejor amigo y cambia su vida para siempre.</p>
+    <section class="bg-gradient-to-r from-blue-400 to-blue-600 text-white text-center py-16 px-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold">🐾 ¡Dales una segunda oportunidad!</h2>
+        <p class="mt-4 text-xl font-medium">Encuentra a tu mejor amigo y cambia su vida para siempre.</p>
     </section>
 
     <!-- Contenido Principal -->
     <div class="container mx-auto p-6 flex flex-col md:flex-row gap-6">
-        <!-- Sección principal -->
-        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-bold">Bienvenidos a Cuatro Patitas</h2>
-            <p class="mt-4">En Cuatro Patitas Fighiera, trabajamos con amor y dedicación para rescatar, rehabilitar y encontrar hogares llenos de cariño para perros y gatos que han sido abandonados o maltratados. Cada patita que salvamos es una historia de esperanza y un paso hacia un mundo mejor para nuestros fieles compañeros.</p>
-            <p class="mt-2">Conoce a nuestros rescatados y súmate a esta hermosa causa visitando nuestra sección de <a href="adopciones.html" class="text-blue-600 font-semibold">Adopciones</a>.</p>
-            <img src="IMG/Imagen_de_WhatsApp_2024-08-12_a_las_16.39.59_793d2dc7-removebg-preview (1).png" alt="Logo Cuatro Patitas" class="mt-6 mx-auto w-1/2">
+        <div class="md:w-3/4 bg-white bg-opacity-90 p-8 rounded-lg shadow-lg text-lg leading-relaxed">
+            <h2 class="text-3xl font-bold">Bienvenidos a Cuatro Patitas</h2>
+            <p class="mt-4">En <span class="font-bold">Cuatro Patitas Fighiera</span>, trabajamos con amor y dedicación para rescatar, rehabilitar y encontrar hogares llenos de cariño para perros y gatos que han sido abandonados o maltratados.</p>
+            <p class="mt-2">Conoce a nuestros rescatados visitando nuestra sección de <a href="adopciones.html" class="text-blue-600 font-semibold underline">🐾 Adopciones</a>.</p>
+            <img src="IMG/logo.png" alt="Logo Cuatro Patitas" class="mt-6 mx-auto w-2/3 md:w-1/2">
         </div>
 
-        <!-- Menú Secundario -->
-        <div class="md:w-1/4 bg-blue-50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold">Recursos y Cuidados</h3>
-            <ul class="mt-4 space-y-3">
-                <li><a href="#" class="block bg-blue-600 text-white text-center p-2 rounded-lg hover:bg-blue-700 transition">Alimento para perros</a></li>
-                <li><a href="#" class="block bg-blue-600 text-white text-center p-2 rounded-lg hover:bg-blue-700 transition">Alimento para gatos</a></li>
-                <li><a href="#" class="block bg-blue-600 text-white text-center p-2 rounded-lg hover:bg-blue-700 transition">Foro para gatos</a></li>
-                <li><a href="#" class="block bg-blue-600 text-white text-center p-2 rounded-lg hover:bg-blue-700 transition">Foro para perros</a></li>
-                <li><a href="#" class="block bg-blue-600 text-white text-center p-2 rounded-lg hover:bg-blue-700 transition">Cuidados para perros ancianos</a></li>
-                <li><a href="#" class="block bg-blue-600 text-white text-center p-2 rounded-lg hover:bg-blue-700 transition">Cuidados para gatos</a></li>
+        <div class="md:w-1/4 bg-blue-50 bg-opacity-90 p-6 rounded-lg shadow-lg text-lg">
+            <h3 class="text-2xl font-semibold">📌 Recursos y Cuidados</h3>
+            <ul class="mt-4 space-y-4">
+                <li><a href="#" class="block bg-blue-600 text-white text-center p-3 rounded-lg hover:bg-blue-700 transition font-semibold">🍖 Alimento para perros</a></li>
+                <li><a href="#" class="block bg-blue-600 text-white text-center p-3 rounded-lg hover:bg-blue-700 transition font-semibold">🐱 Alimento para gatos</a></li>
+                <li><a href="#" class="block bg-blue-600 text-white text-center p-3 rounded-lg hover:bg-blue-700 transition font-semibold">📢 Foro para gatos</a></li>
+                <li><a href="#" class="block bg-blue-600 text-white text-center p-3 rounded-lg hover:bg-blue-700 transition font-semibold">📢 Foro para perros</a></li>
             </ul>
         </div>
     </div>
 
     <!-- Mapa -->
     <div class="container mx-auto my-8 text-center">
-        <h3 class="text-2xl font-semibold">Nuestra Ubicación</h3>
+        <h3 class="text-3xl font-semibold">📍 Nuestra Ubicación</h3>
         <iframe class="mt-4 w-full md:w-3/4 h-64 mx-auto rounded-lg shadow-lg" 
             src="https://www.google.com/maps/embed?..." 
             style="border:0;" allowfullscreen="" loading="lazy">
@@ -61,9 +62,14 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white text-center p-4 mt-10">
-        <p>© 2024 Cuatro Patitas - Asociación con sede en Fighiera.</p>
+    <footer class="bg-blue-900 text-white text-center p-6 mt-10 text-lg font-medium">
+        <p>© 2024 <span class="font-bold">Cuatro Patitas</span> - Asociación con sede en Fighiera.</p>
     </footer>
 
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
