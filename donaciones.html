@@ -3,52 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
     <title>Donaciones - Cuatro Patitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Donaciones - Cuatro Patitas</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="adopciones.html">Adopciones</a></li>
-            <li><a href="formulario.html">Formulario</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+<body class="bg-blue-100 font-sans">
 
-    <section class="tipo-donacion">
-        <h2 id="seleccion-de-donacion">Seleccioná el tipo de donación:</h2>
-        <div class="botones-donacion">
-            <button><a href="">Mensual</a></button>
-            <button><a href="">Por única vez</a></button>
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Cuatro Patitas</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                <li><a href="adopciones.html" class="hover:underline">Adopciones</a></li>
+                <li><a href="formulario.html" class="hover:underline">Formulario</a></li>
+                <li><a href="donaciones.html" class="hover:underline">Donaciones</a></li>
+                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+            </ul>
         </div>
-    </section>
-    <section class="info-donacion">
-        <div>
-            <h2>¿Por qué son importantes tus donaciones?</h2>
-            <p>Gracias a las donaciones podemos continuar ayudando a los animales rescatados. Con tus aportes, podemos:</p>
-            <ul>
-                <li>Comprar alimentos para los animales rescatados.</li>
-                <li>Adquirir medicamentos esenciales.</li>
-                <li>Cubrir gastos veterinarios y tratamientos especializados.</li>
-            </ul>
-    </section>
-        <section class="metodos-de-donacion">
-            <h2>¿Dónde realizar donaciones?</h2>
-            <p>Para ayudar a nuestra causa, puedes realizar donaciones a traves de nuestro CVU:</p>
-            <ul class="cvu-mp">
-                <li><strong>Nombre:</strong> Ever Adrian Robledo</li>
-                <li><strong>CVU:</strong> 0000003100068150905851</li>
-                <li><strong>Alias:</strong> Ever4patitas</li>
-                <li><strong>CUIL:</strong> 20425334531</li>
-                <li><strong>Plataforma:</strong><a href="https://mpago.la/1KCXsex" target="_blank" id="link-mp">Mercado Pago</a></li>
-            </ul>
-        </section>
+    </nav>
+    <div class="container mx-auto my-8 px-4">
+        <h2 class="text-center text-xl font-semibold mb-4">Seleccioná el tipo de donación</h2>
+        <div class="flex justify-center space-x-4 mb-6">
+            <a href="#" class="bg-green-600 text-white py-2 px-6 rounded-lg shadow hover:bg-green-700">Mensual</a>
+            <a href="#" class="bg-green-600 text-white py-2 px-6 rounded-lg shadow hover:bg-green-700">Por única vez</a>
+        </div>
+
+        <h2 class="text-center text-xl font-semibold mb-4">¿Por qué son importantes tus donaciones?</h2>
+        <p class="text-center text-gray-700 max-w-2xl mx-auto">Con tus aportes, podemos comprar alimentos, adquirir medicamentos y cubrir gastos veterinarios.</p>
+        
+        <h2 class="text-center text-xl font-semibold mt-8">Perros en estado crítico</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="IMG/perro1.jpg" alt="Perro en recuperación" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-lg font-semibold mt-2">Luna - Necesita cirugía</h3>
+                <p class="text-gray-600">Luna necesita una cirugía urgente debido a una fractura grave.</p>
+                <a href="https://mpago.la/donacionluna" target="_blank" class="mt-2 bg-blue-600 text-white py-2 px-4 rounded-lg inline-block hover:bg-blue-700">Donar para Luna</a>
+            </div>
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="IMG/perro2.jpg" alt="Perro enfermo" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-lg font-semibold mt-2">Max - Tratamiento médico</h3>
+                <p class="text-gray-600">Max está en tratamiento por una enfermedad grave y necesita apoyo.</p>
+                <a href="https://mpago.la/donacionmax" target="_blank" class="mt-2 bg-blue-600 text-white py-2 px-4 rounded-lg inline-block hover:bg-blue-700">Donar para Max</a>
+            </div>
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="IMG/perro3.jpg" alt="Cachorro necesitado" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-lg font-semibold mt-2">Rocky - Cuidados intensivos</h3>
+                <p class="text-gray-600">Rocky es un cachorro que necesita hospitalización urgente.</p>
+                <a href="https://mpago.la/donacionrocky" target="_blank" class="mt-2 bg-blue-600 text-white py-2 px-4 rounded-lg inline-block hover:bg-blue-700">Donar para Rocky</a>
+            </div>
+        </div>
+
+        <h2 class="text-center text-xl font-semibold mt-8">Dónde realizar donaciones generales</h2>
+        <p class="text-center text-gray-700 max-w-2xl mx-auto">Puedes realizar donaciones a través de nuestro CVU:</p>
+        <ul class="text-center mt-4">
+            <li><strong>Nombre:</strong> Ever Adrian Robledo</li>
+            <li><strong>CVU:</strong> 0000003100068150905851</li>
+            <li><strong>Alias:</strong> Ever4patitas</li>
+            <li><strong>CUIL:</strong> 20425334531</li>
+            <li><strong>Plataforma:</strong> <a href="https://mpago.la/1KCXsex" target="_blank" class="text-blue-600 hover:underline">Mercado Pago</a></li>
+        </ul>
     </div>
-    <footer class="pie-donaciones">Asociacion con sede en fighiera.</footer>
+    <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+        Asociación Civil Cuatro Patitas - Fighiera
+    </footer>
 </body>
 </html>
 

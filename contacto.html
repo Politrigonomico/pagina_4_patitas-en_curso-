@@ -1,67 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
     <title>Contacto - Cuatro Patitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="fondo">
-    <header>
-        <h1>Contacto - Cuatro Patitas</h1>
-    </header>
+<body class="bg-blue-100 font-sans">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="adopciones.html">Adopciones</a></li>
-            <li><a href="donaciones.html">Donaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <section class="info-contacto">
-        <div>
-            <h2>Aca encintraras nuestras formas de contacto</h2>
-            <p>Gracias a las donaciones podemos continuar ayudando a los animales rescatados. Con tus aportes, podemos:</p>
-            <ul>
-                <li>Comprar alimentos para los animales rescatados.</li>
-                <li>Adquirir medicamentos esenciales.</li>
-                <li>Cubrir gastos veterinarios y tratamientos especializados.</li>
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Cuatro Patitas</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                <li><a href="adopciones.html" class="hover:underline">Adopciones</a></li>
+                <li><a href="formulario.html" class="hover:underline">Formulario</a></li>
+                <li><a href="donaciones.html" class="hover:underline">Donaciones</a></li>
+                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
             </ul>
-    </section>
-    <section class="contacto-container">
-        <div class="contacto-boton">
-            <a href="https://instagram.com/" target="_blank">
-                <div class="contacto-icono">📸</div>
-                <div class="contacto-texto">Instagram</div>
+        </div>
+    </nav>
+    <div class="container mx-auto my-8 px-4">
+        <h2 class="text-center text-xl font-semibold mb-4">Nuestras formas de contacto</h2>
+        <p class="text-center text-gray-700 max-w-2xl mx-auto">Gracias a las donaciones podemos continuar ayudando a los animales rescatados. Con tus aportes, podemos comprar alimentos, adquirir medicamentos y cubrir gastos veterinarios.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            <a href="https://instagram.com/" target="_blank" class="flex flex-col items-center bg-white shadow-md p-4 rounded-lg hover:bg-gray-200">
+                <span class="text-4xl">📸</span>
+                <span class="mt-2 text-lg font-semibold">Instagram</span>
+            </a>
+            <a href="https://facebook.com/" target="_blank" class="flex flex-col items-center bg-white shadow-md p-4 rounded-lg hover:bg-gray-200">
+                <span class="text-4xl">📘</span>
+                <span class="mt-2 text-lg font-semibold">Facebook</span>
+            </a>
+            <a href="tel:+" class="flex flex-col items-center bg-white shadow-md p-4 rounded-lg hover:bg-gray-200">
+                <span class="text-4xl">📞</span>
+                <span class="mt-2 text-lg font-semibold">Llamada</span>
+            </a>
+            <a href="https://wa.me/" target="_blank" class="flex flex-col items-center bg-white shadow-md p-4 rounded-lg hover:bg-gray-200">
+                <span class="text-4xl">💬</span>
+                <span class="mt-2 text-lg font-semibold">WhatsApp</span>
             </a>
         </div>
-
-        <div class="contacto-boton">
-            <a href="https://facebook.com/" target="_blank">
-                <div class="contacto-icono">📘</div>
-                <div class="contacto-texto">Facebook</div>
-            </a>
-        </div>
-
-        <div class="contacto-boton">
-            <a href="tel:+">
-                <div class="contacto-icono">📞</div>
-                <div class="contacto-texto">Llamada</div>
-            </a>
-        </div>
-
-        <div class="contacto-boton">
-            <a href="https://wa.me/" target="_blank">
-                <div class="contacto-icono">💬</div>
-                <div class="contacto-texto">WhatsApp</div>
-            </a>
-        </div>
-    </section>
-
-
-    <footer class="pie-contacto">Asociación Civil Cuatro Patitas - Fighiera</footer>
+    </div>
+    <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+        Asociación Civil Cuatro Patitas - Fighiera
+    </footer>
 </body>
-
 </html>

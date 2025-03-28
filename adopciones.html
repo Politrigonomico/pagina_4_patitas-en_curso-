@@ -1,62 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="estilo.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adopciones</title>
+    <title>Adopciones - Cuatro Patitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-        <h1>Cuatro Patitas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="formulario.html">Formulario</a></li> <!-- Enlace actualizado -->
-                <li><a href="donaciones.html">Donaciones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+<body class="bg-blue-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Cuatro Patitas</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                <li><a href="adopciones.html" class="hover:underline">Adopciones</a></li>
+                <li><a href="formulario.html" class="hover:underline">Formulario</a></li>
+                <li><a href="donaciones.html" class="hover:underline">Donaciones</a></li>
+                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
             </ul>
-        </nav>
-        <div id="container">
-            <div class="toggle"></div>
-    
-            <script src="toggle.js"></script>
         </div>
-    
-        <div class="animales_en_adopcion">
-            <figure>
-                <img class="dog" src="IMG/robi.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrito de 1 años en Adopcion responsable.<a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="cat" src="IMG/cuchi.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrita de 3 años en Adopcion responsable.<a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="dog" src="IMG/cuchi.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrita de 3 años en Adopcion responsable. <a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="dog" src="IMG/cuchi.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrita de 3 años en Adopcion responsable. <a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="cat" src="IMG/cuchi.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrita de 3 años en Adopcion responsable. <a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="cat" src="IMG/naranja.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrita de 3 años en Adopcion responsable. <a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="cat" src="IMG/tigre.jpg" alt="">
-                <figcaption class="Texto_adopciones">gato de 3 meses en Adopcion responsable. <a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
-            <figure>
-                <img class="cat" src="IMG/naranja.jpg" alt="">
-                <figcaption class="Texto_adopciones">Perrita de 3 años en Adopcion responsable. <a href="formulario.html" class="botonadoptar">Adoptame</a></figcaption>
-            </figure>
+    </nav>
+    <div class="container mx-auto my-8 px-4">
+        <h2 class="text-center text-xl font-semibold mb-4">Nuestros Animales en Adopción</h2>
+        <div id="adopciones" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Los animales en adopción se generarán dinámicamente -->
         </div>
-    </body>
-    <footer>Asociacion con sede en fighiera.</footer>
+    </div>
+    <footer class="bg-blue-900 text-white text-center py-4 mt-8">
+        Asociación con sede en Fighiera.
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/api/adopciones")  // Llamada a la API de administración
+                .then(response => response.json())
+                .then(data => {
+                    const contenedor = document.getElementById("adopciones");
+                    data.forEach(animal => {
+                        const card = document.createElement("div");
+                        card.className = "bg-white shadow-md rounded-lg overflow-hidden text-center p-4";
+                        card.innerHTML = `
+                            <img src="${animal.imagen}" alt="${animal.nombre}" class="w-full h-48 object-cover">
+                            <h3 class="text-lg font-bold mt-2">${animal.nombre}</h3>
+                            <p class="text-gray-700">${animal.edad} años - ${animal.especie}</p>
+                            <a href="formulario.html" class="mt-3 inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Adoptame</a>
+                        `;
+                        contenedor.appendChild(card);
+                    });
+                })
+                .catch(error => console.error("Error cargando los animales en adopción:", error));
+        });
+    </script>
+</body>
 </html>
 

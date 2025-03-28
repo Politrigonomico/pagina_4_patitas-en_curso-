@@ -3,177 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Formulario - Cuatro Patitas</title>
 </head>
-<header>
-    <h1>Formulario - Cuatro Patitas</h1>
-</header>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="adopciones.html">Adopciones</a></li>
-            <li><a href="donaciones.html">Donaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+<body class="bg-blue-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Cuatro Patitas</h1>
+            <ul class="flex space-x-6">
+                <li><a href="adopciones.html" class="hover:underline">Adopciones</a></li>
+                <li><a href="formulario.html" class="hover:underline">Formulario</a></li>
+                <li><a href="donaciones.html" class="hover:underline">Donaciones</a></li>
+                <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="contenido">
-        <main>
-            <h2 class="titulo-form">Complete el formulario para continuar con la adopcion.</h2>
-            <h2 class="titulo-form">Solo pueden completar el formulario mayores de edad.</h2>
-            <h2 class="titulo-form">Uno de nuestros integrantes se comunicara con usted una vez evaluado.</h2>
-            <form>
-                <fieldset>
-                    <legend>Cuestionario Pre-Adopción</legend>
+<div class="max-w-4xl mx-auto p-6">
+    <main>
+        <h2 class="text-2xl font-bold text-center mb-6">Complete el formulario para continuar con la adopción.</h2>
+        <h2 class="text-lg text-center mb-6">Solo pueden completar el formulario mayores de edad.</h2>
+        <h2 class="text-lg text-center mb-6">Uno de nuestros integrantes se comunicará con usted una vez evaluado.</h2>
+        
+        <form action="#" method="POST" class="bg-white shadow-lg rounded-lg p-8 space-y-6">
+            <fieldset class="border-2 border-gray-300 p-4 rounded-lg">
+                <legend class="font-semibold text-xl mb-4">Cuestionario Pre-Adopción</legend>
 
-                    <!-- Datos del adoptante -->
+                <!-- Datos del adoptante -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="form-group">
-                        <label for="nombre">Nombre Completo:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="edad">Edad:</label>
-                        <input type="number" id="edad" name="edad" max="99" min="0" placeholder="Escribe tu edad" required>
+                        <label for="edad" class="block text-sm font-medium text-gray-700">Edad:</label>
+                        <input type="number" id="edad" name="edad" max="99" min="0" placeholder="Escribe tu edad" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="direccion">Dirección:</label>
-                        <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección" required>
-                    </div>
+                <div class="form-group">
+                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="localidad">Localidad:</label>
-                        <input type="text" id="localidad" name="localidad" placeholder="Escribe tu localidad" required>
-                    </div>
+                <div class="form-group">
+                    <label for="localidad" class="block text-sm font-medium text-gray-700">Localidad:</label>
+                    <input type="text" id="localidad" name="localidad" placeholder="Escribe tu localidad" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="profesion">Profesión/Ocupación:</label>
-                        <input type="text" id="profesion" name="profesion" placeholder="Escribe tu profesión u ocupación">
-                    </div>
+                <div class="form-group">
+                    <label for="profesion" class="block text-sm font-medium text-gray-700">Profesión/Ocupación:</label>
+                    <input type="text" id="profesion" name="profesion" placeholder="Escribe tu profesión u ocupación" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+                </div>
 
-                    <div class="form-group">
-                        <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
-                    </div>
+                <div class="form-group">
+                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="redes">Redes Sociales:</label>
-                        <input type="text" id="redes" name="redes" placeholder="Escribe tus redes sociales">
-                    </div>
+                <div class="form-group">
+                    <label for="redes" class="block text-sm font-medium text-gray-700">Redes Sociales:</label>
+                    <input type="text" id="redes" name="redes" placeholder="Escribe tus redes sociales" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+                </div>
 
-                    <div class="form-group">
-                        <label for="motivo">¿Por qué le interesa este animal en particular?</label>
-                        <textarea id="motivo" name="motivo" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <!-- Preguntas -->
+                <div class="form-group">
+                    <label for="motivo" class="block text-sm font-medium text-gray-700">¿Por qué le interesa este animal en particular?</label>
+                    <textarea id="motivo" name="motivo" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="funcion">¿Qué función desempeñaría en su hogar (compañía, guardia, etc)?</label>
-                        <textarea id="funcion" name="funcion" rows="4" placeholder="Especifica lo más posible" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="funcion" class="block text-sm font-medium text-gray-700">¿Qué función desempeñaría en su hogar (compañía, guardia, etc)?</label>
+                    <textarea id="funcion" name="funcion" rows="4" placeholder="Especifica lo más posible" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="propiedad">¿La casa en donde vive es de su propiedad?</label>
-                        <input type="text" id="propiedad" name="propiedad" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="propiedad" class="block text-sm font-medium text-gray-700">¿La casa en donde vive es de su propiedad?</label>
+                    <input type="text" id="propiedad" name="propiedad" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="inquilino"> Si es inquilino, ¿el propietario le permite tener una mascota?</label>
-                        <input type="text" id="inquilino" name="inquilino" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="inquilino" class="block text-sm font-medium text-gray-700">Si es inquilino, ¿el propietario le permite tener una mascota?</label>
+                    <input type="text" id="inquilino" name="inquilino" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="reglamento">Si vive en propiedad horizontal, ¿el reglamento del consorcio permite la tenencia de mascotas?</label>
-                        <input type="text" id="reglamento" name="reglamento" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="reglamento" class="block text-sm font-medium text-gray-700">Si vive en propiedad horizontal, ¿el reglamento del consorcio permite la tenencia de mascotas?</label>
+                    <input type="text" id="reglamento" name="reglamento" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="espacios">¿La casa tiene patio, jardín, balcón? En caso de tener patio o jardín, ¿está tapiado o alambrado?</label>
-                        <textarea id="espacios" name="espacios" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="espacios" class="block text-sm font-medium text-gray-700">¿La casa tiene patio, jardín, balcón? En caso de tener patio o jardín, ¿está tapiado o alambrado?</label>
+                    <textarea id="espacios" name="espacios" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="cuidado">¿Al cuidado de quién quedaría el animal cuando vaya de vacaciones?</label>
-                        <input type="text" id="cuidado" name="cuidado" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="cuidado" class="block text-sm font-medium text-gray-700">¿Al cuidado de quién quedaría el animal cuando vaya de vacaciones?</label>
+                    <input type="text" id="cuidado" name="cuidado" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="horas-solo">¿Cuántas horas por día estaría solo el animal?</label>
-                        <input type="number" id="horas-solo" name="horas-solo" placeholder="Escribe la cantidad de horas" required>
-                    </div>
+                <div class="form-group">
+                    <label for="horas-solo" class="block text-sm font-medium text-gray-700">¿Cuántas horas por día estaría solo el animal?</label>
+                    <input type="number" id="horas-solo" name="horas-solo" placeholder="Escribe la cantidad de horas" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="frecuencia">¿Cuántas veces lo sacarían al día?</label>
-                        <input type="number" id="frecuencia" name="frecuencia" placeholder="Escribe la cantidad de veces" required>
-                    </div>
+                <div class="form-group">
+                    <label for="frecuencia" class="block text-sm font-medium text-gray-700">¿Cuántas veces lo sacarían al día?</label>
+                    <input type="number" id="frecuencia" name="frecuencia" placeholder="Escribe la cantidad de veces" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="dia">¿Dónde estaría el animal durante el día?</label>
-                        <textarea id="dia" name="dia" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="dia" class="block text-sm font-medium text-gray-700">¿Dónde estaría el animal durante el día?</label>
+                    <textarea id="dia" name="dia" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="noche">¿Dónde dormiría?</label>
-                        <textarea id="noche" name="noche" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="noche" class="block text-sm font-medium text-gray-700">¿Dónde dormiría?</label>
+                    <textarea id="noche" name="noche" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="familia">¿Cuántas personas viven en la casa y qué edades tienen?</label>
-                        <textarea id="familia" name="familia" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="familia" class="block text-sm font-medium text-gray-700">¿Cuántas personas viven en la casa y qué edades tienen?</label>
+                    <textarea id="familia" name="familia" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="acuerdo">¿Están de acuerdo TODOS los integrantes del grupo familiar con adoptar una mascota?</label>
-                        <input type="text" id="acuerdo" name="acuerdo" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="acuerdo" class="block text-sm font-medium text-gray-700">¿Están de acuerdo TODOS los integrantes del grupo familiar con adoptar una mascota?</label>
+                    <input type="text" id="acuerdo" name="acuerdo" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="mascotas-anteriores">¿Ya ha tenido mascotas? ¿De qué murieron?</label>
-                        <textarea id="mascotas-anteriores" name="mascotas-anteriores" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="mascotas-anteriores" class="block text-sm font-medium text-gray-700">¿Ya ha tenido mascotas? ¿De qué murieron?</label>
+                    <textarea id="mascotas-anteriores" name="mascotas-anteriores" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="mascotas-actuales">¿En la actualidad tiene mascotas? En caso de respuesta afirmativa:</label>
-                        <textarea id="mascotas-actuales" name="mascotas-actuales" rows="6" placeholder="Especificar especie, edad, si están esterilizados, veterinario y recursos" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="mascotas-actuales" class="block text-sm font-medium text-gray-700">¿En la actualidad tiene mascotas? En caso de respuesta afirmativa:</label>
+                    <textarea id="mascotas-actuales" name="mascotas-actuales" rows="6" placeholder="Especificar especie, edad, si están esterilizados, veterinario y recursos" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="esterilizacion">Si el animalito es cachorro, ¿Todos los integrantes de la familia están de acuerdo con esterilizarlo a la edad correspondiente?</label>
-                        <textarea id="esterilizacion" name="esterilizacion" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="esterilizacion" class="block text-sm font-medium text-gray-700">Si el animalito es cachorro, ¿Todos los integrantes de la familia están de acuerdo con esterilizarlo a la edad correspondiente?</label>
+                    <textarea id="esterilizacion" name="esterilizacion" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="recursos">¿Tiene recursos económicos para mantenerlo, aplicarle las vacunas anuales correspondientes y afrontar cualquier eventual inconveniente relativo a la salud del animal?</label>
-                        <input type="text" id="recursos" name="recursos" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="recursos" class="block text-sm font-medium text-gray-700">¿Tiene recursos económicos para mantenerlo, aplicarle las vacunas anuales correspondientes y afrontar cualquier eventual inconveniente relativo a la salud del animal?</label>
+                    <input type="text" id="recursos" name="recursos" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="problemas">¿Qué motivo haría que no pudiera hacerse más cargo del animal? ¿Qué haría?</label>
-                        <textarea id="problemas" name="problemas" rows="4" placeholder="Escribe aquí tu respuesta" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="problemas" class="block text-sm font-medium text-gray-700">¿Qué motivo haría que no pudiera hacerse más cargo del animal? ¿Qué haría?</label>
+                    <textarea id="problemas" name="problemas" rows="4" placeholder="Escribe aquí tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="visita">¿Está dispuesto a recibir una visita nuestra, con el objetivo de conocer la familia y el futuro posible hogar del animal?</label>
-                        <input type="text" id="visita" name="visita" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="visita" class="block text-sm font-medium text-gray-700">¿Está dispuesto a recibir una visita nuestra, con el objetivo de conocer la familia y el futuro posible hogar del animal?</label>
+                    <input type="text" id="visita" name="visita" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="responsabilidad">¿Ud. es consciente de la responsabilidad que significa adoptar una mascota para toda la vida?</label>
-                        <input type="text" id="responsabilidad" name="responsabilidad" placeholder="Escribe tu respuesta" required>
-                    </div>
+                <div class="form-group">
+                    <label for="responsabilidad" class="block text-sm font-medium text-gray-700">¿Ud. es consciente de la responsabilidad que significa adoptar una mascota para toda la vida?</label>
+                    <input type="text" id="responsabilidad" name="responsabilidad" placeholder="Escribe tu respuesta" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="foto" class="subir-archivo">Importante: Anexar al cuestionario foto del patio cerrado o balcón con red.</label>
-                        <input type="file" id="foto" name="foto" accept="image/*" required>
-                    </div>
+                <div class="form-group">
+                    <label for="foto" class="block text-sm font-medium text-gray-700">Importante: Anexar al cuestionario foto del patio cerrado o balcón con red.</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" class="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
 
-                    <input type="submit" value="Enviar">
-                </fieldset>
-            </form>
-        </main>
-    </div>
-    <footer>Asociacion con sede en fighiera.</footer>
+                <div class="flex justify-center">
+                    <input type="submit" value="Enviar" class="mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</div>
+
+<footer class="bg-blue-500 text-white text-center py-4">
+    Asociación con sede en Fighiera.
+</footer>
+
 </body>
 </html>
+
